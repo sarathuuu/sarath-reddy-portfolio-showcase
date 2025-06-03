@@ -65,11 +65,11 @@ const Certifications = () => {
   };
 
   return (
-    <section id="certifications" className="py-20 bg-background">
+    <section id="certifications" className="py-20 bg-gray-800">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Certifications & Learning</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Certifications & Learning</h2>
+          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
             Continuous professional development through structured learning and industry-recognized certifications
           </p>
         </div>
@@ -78,14 +78,14 @@ const Certifications = () => {
           {certifications.map((cert, index) => {
             const IconComponent = getIcon(cert.type);
             return (
-              <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
+              <Card key={index} className="hover:shadow-lg transition-shadow duration-300 bg-gray-900 border-gray-700">
                 <CardHeader className="pb-3">
                   <div className="flex items-start justify-between">
                     <div className="flex items-start space-x-3">
-                      <IconComponent className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
+                      <IconComponent className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0" />
                       <div>
-                        <CardTitle className="text-lg leading-tight">{cert.title}</CardTitle>
-                        <p className="text-sm text-muted-foreground mt-1">{cert.issuer}</p>
+                        <CardTitle className="text-lg leading-tight text-white">{cert.title}</CardTitle>
+                        <p className="text-sm text-gray-400 mt-1">{cert.issuer}</p>
                       </div>
                     </div>
                     <Badge className={getStatusColor(cert.status)}>
@@ -94,11 +94,11 @@ const Certifications = () => {
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-foreground/80 leading-relaxed">
+                  <p className="text-sm text-gray-300 leading-relaxed">
                     {cert.description}
                   </p>
                   <div className="mt-3">
-                    <Badge variant="outline" className="text-xs">
+                    <Badge variant="outline" className="text-xs border-gray-600 text-gray-400">
                       {cert.type}
                     </Badge>
                   </div>
@@ -109,28 +109,28 @@ const Certifications = () => {
         </div>
 
         <div className="mt-16 max-w-2xl mx-auto">
-          <Card className="border-2 border-primary/20 bg-gradient-to-br from-primary/5 to-blue-500/5">
+          <Card className="border-2 border-blue-500/20 bg-gradient-to-br from-blue-500/5 to-purple-500/5 bg-gray-900">
             <CardHeader className="text-center">
-              <CardTitle className="text-xl">Learning Philosophy</CardTitle>
+              <CardTitle className="text-xl text-white">Learning Philosophy</CardTitle>
             </CardHeader>
             <CardContent className="text-center">
-              <p className="text-foreground/80 leading-relaxed mb-4">
+              <p className="text-gray-300 leading-relaxed mb-4">
                 I believe in continuous learning and staying updated with the latest industry trends. 
                 Each certification represents not just academic achievement, but practical skills 
                 that I can apply to real-world challenges.
               </p>
               <div className="grid grid-cols-3 gap-4 mt-6">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-primary">3+</div>
-                  <div className="text-xs text-muted-foreground">Certifications</div>
+                  <div className="text-2xl font-bold text-blue-400">3+</div>
+                  <div className="text-xs text-gray-400">Certifications</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-primary">100+</div>
-                  <div className="text-xs text-muted-foreground">Learning Hours</div>
+                  <div className="text-2xl font-bold text-blue-400">100+</div>
+                  <div className="text-xs text-gray-400">Learning Hours</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-primary">4</div>
-                  <div className="text-xs text-muted-foreground">Skill Areas</div>
+                  <div className="text-2xl font-bold text-blue-400">4</div>
+                  <div className="text-xs text-gray-400">Skill Areas</div>
                 </div>
               </div>
             </CardContent>
